@@ -36,22 +36,22 @@ folder4="Decrypted"
 
 if [[ "$code" != *"$folder1"* ]]
 then
-        mkdir /home/user/src/Service_TP/$folder1
+        mkdir $folder1
 fi
 
 if [[ "$code" != *"$folder2"* ]]
 then
-        mkdir /home/user/src/Service_TP/$folder2
+        mkdir $folder2
 fi
 
 if [[ "$code" != *"$folder3"* ]]
 then
-        mkdir /home/user/src/Service_TP/$folder3
+        mkdir $folder3
 fi
 
 if [[ "$code" != *"$folder4"* ]]
 then
-        mkdir /home/user/src/Service_TP/$folder4
+        mkdir $folder4
 fi
 
 chmod +x key.py
