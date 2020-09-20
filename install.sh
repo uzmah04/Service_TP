@@ -25,20 +25,23 @@ else
         echo "src/Service_TP created"
 fi
 
+cd ~/src/Service_TP
+
+chmod +x key.py
 python3 key.py
 echo "Key Created"
 
-sudo su
+chmod +x encrypt.service
+chmod +x decrypt.service
+sudo cp encrypt.service /etc/systemd/system/encrypt.service
+sudo cp decrypt.service /etc/systemd/system/decrypt.service
 
-cp ~/src/Service_TP/encrypt.service /etc/systemd/system/encrypt.service
-cp ~/src/Service_TP/decrypt.service /etc/systemd/system/decrypt.service
-
-systemctl enable encrypt.service
-systemctl start encrypt.service
+sudo systemctl enable encrypt.service
+sudo systemctl start encrypt.service
 echo "Service encrypt started"
 
-systemctl enable decrypt.service
-systemctl start decrypt.service
+sudo systemctl enable decrypt.service
+sudo systemctl start decrypt.service
 echo "Service decrypt started"
 
 echo "Installation of Encrypt Decrypt Service Successfull"
