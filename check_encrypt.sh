@@ -16,7 +16,7 @@ do
 		else
 			cd /home/uzmah/src/Service_TP
 			python3 encrypt.py "$fichier"
-			mv ~/src/Service_TP/toCrypt/"$fichier.encrypted" ~/src/Service_TP/Crypted/"$fichier.encrypted"
+			mv home/uzmah/src/Service_TP/toCrypt/"$fichier.encrypted" home/uzmah/src/Service_TP/Crypted/"$fichier.encrypted"
 		fi
 	done
 done
