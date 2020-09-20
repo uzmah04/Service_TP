@@ -27,6 +27,33 @@ fi
 
 cd ~/src/Service_TP
 
+code="$(ls)"
+
+folder1="toCrypt"
+folder2="Crypted"
+folder3="toDecrypt"
+folder4="Decrypted"
+
+if [[ "$code" != *"$folder1"* ]]
+then
+        mkdir /home/user/src/Service_TP/$folder1
+fi
+
+if [[ "$code" != *"$folder2"* ]]
+then
+        mkdir /home/user/src/Service_TP/$folder2
+fi
+
+if [[ "$code" != *"$folder3"* ]]
+then
+        mkdir /home/user/src/Service_TP/$folder3
+fi
+
+if [[ "$code" != *"$folder4"* ]]
+then
+        mkdir /home/user/src/Service_TP/$folder4
+fi
+
 chmod +x key.py
 python3 key.py
 echo "Key Created"
