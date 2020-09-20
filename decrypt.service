@@ -3,3 +3,4 @@ Description=Encrypt Decrypt Service
 
 [Service]
 ExecStart=/home/uzmah/src/Service_TP/check_decrypt.sh
+Restart=always
