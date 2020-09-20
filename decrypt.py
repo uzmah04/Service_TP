@@ -1,16 +1,22 @@
 from cryptography.fernet import Fernet
+import os
+import sys
+
+fichier = sys.argv[1]
 
 file = open('key.key','rb')
 key = file.read()
 file.close
 
-with open('text.txt.encrypted', 'rb') as f:
+os.chdir("/home/uzmah/Documents/Service/toDecrypt")
+
+with open(fichier, 'rb') as f:
 	data = f.read()
 
 fernet = Fernet(key)
 decrypted = fernet.decrypt(data)
 
-#write encrypted file
+nom_decrypt = fichier+'.decrypted'
 
-with open('text.txt.decrypted', 'wb') as f:
+with open(nom_decrypt, 'wb') as f:
 	f.write(decrypted)
